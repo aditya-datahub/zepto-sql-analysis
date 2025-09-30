@@ -6,47 +6,38 @@ A data analysis project focused on **Zepto** operational data. We use **SQL** fo
 
 ## 📁 Project Structure
 
-| Path | Purpose |
+| Path | Focus |
 | :--- | :--- |
-| **`datasets/zepto_v2.csv`** | The raw operational dataset used for the analysis. |
-| **`sql/01_zepto_data_preparation.sql`** | SQL scripts for initial setup, data quality checks, and cleaning. |
-| **`sql/02_zepto_analysis_queries.sql`** | SQL queries for **Exploratory Data Analysis (EDA)** and calculating important business metrics. |
-| `LICENSE` | Project licensing details. |
+| **`datasets/zepto_v2.csv`** | Raw quick-commerce inventory data. |
+| **`sql/01_zepto_data_preparation.sql`** | **Data Cleaning:** Schema setup, data quality checks, and unit conversion. |
+| **`sql/02_zepto_analysis_queries.sql`** | **EDA:** Calculating key metrics, value ranking, and strategic insights. |
+| `LICENSE` | Project license. |
 
 ---
 
-## 🧹 Data Preparation & Cleaning Highlights (`01_zepto_data_preparation.sql`)
+## 📈 Key Insights & Analysis Highlights
 
-This script demonstrates foundational data governance skills:
+This project addresses crucial business questions by segmenting the data and calculating specific metrics:
 
-* **Schema & Table Creation:** Defining the table structure (`CREATE TABLE`) with appropriate data types for the raw data.
-* **Unit Conversion:** Applying arithmetic operations (`/ 100.0`) to convert the price columns (`mrp`, `discountedSellingPrice`) from **paise to rupees** for consistency and accurate analysis.
-* **Data Validation:** Identifying and **removing invalid records** where the discounted selling price or MRP was zero.
-* **Data Integrity:** Checking the dataset for **NULL values** and addressing potential duplicates.
+### **Data Preparation Focus** (`01_zepto_data_preparation.sql`)
+* **Unit Conversion:** Crucial transformation to convert all price fields (**paise to rupees**) for accurate financial analysis.
+* **Data Integrity:** Identifying and correcting/removing invalid entries (e.g., zero prices) and checking for data quality issues.
 
----
-
-## 📈 Analysis & Insights Highlights (`02_zepto_analysis_queries.sql`)
-
-This script focuses on extracting actionable business intelligence from the cleaned data:
-
-* **Revenue Estimation:** Calculating the total estimated revenue generated per **product category**.
-* **Value-for-Money Ranking:** Calculating the **price per gram** metric to standardize comparison across different products and identify best value.
-* **Discount Strategy Evaluation:** Identifying the top product categories that are offering the **highest average discount percentage**.
-* **Pricing Margin Assessment:** Filtering for products with **high MRP** but minimal discount to analyze potential high-margin items.
-* **Inventory Segmentation:** Using **`CASE` statements** to categorize products into custom weight segments (e.g., Low, Medium, Bulk) for inventory management.
+### **Analysis & Strategy Focus** (`02_zepto_analysis_queries.sql`)
+* **Value Assessment:** Calculated **Price per Gram** to standardize product value and identify best-value items.
+* **Revenue & Discounts:** Estimated total revenue per category and determined the highest average discount percentage offered.
+* **Inventory Segmentation:** Used **`CASE` statements** to categorize products (e.g., Low, Medium, Bulk) for optimized inventory planning.
 
 ---
 
-## 🛠️ Key Skills & Techniques
+## 🛠️ Core Skills Demonstrated
 
-This project demonstrates core proficiency in the data analysis workflow using SQL:
+This project showcases core proficiency in the data analysis workflow using SQL:
 
-* **Data Cleaning & Transformation**
-* **Exploratory Data Analysis (EDA)**
-* **Business Metric Calculation**
-* **Foundational Querying** (GROUP BY, and Aggregate functions)
-* **Conditional Logic** (using `CASE` statements for segmentation)
+* **Data Preparation & Transformation:** **Standardizing** data integrity, including crucial **unit conversion** (paise to rupees).
+* **Foundational Querying:** Writing efficient SQL using **`GROUP BY`** and **Aggregate Functions** to summarize large datasets.
+* **Business Metric Calculation:** **Calculating key performance indicators (KPIs)** like estimated revenue, **price per gram** efficiency, and discount averages.
+* **Conditional Logic:** Employing **`CASE` statements** for data segmentation and custom reporting.
 
 ---
 
