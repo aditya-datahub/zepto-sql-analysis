@@ -43,9 +43,11 @@ This project showcases core proficiency in the data analysis workflow using SQL:
 
 ## 🚀 Getting Started
 
-To run this analysis:
+To replicate this analysis:
 
-1.  **Load** the `datasets/zepto_v2.csv` file into your preferred SQL database.
-2.  **Execute** the scripts in the `sql/` folder sequentially, starting with **`01_zepto_data_preparation.sql`**.
+1.  **Setup:** Import the `datasets/zepto_v2.csv` file into your SQL database environment (e.g., MySQL, PostgreSQL).
+2.  **Run Scripts:** Execute the SQL scripts in numerical order:
+    - Start with `sql/01_zepto_data_preparation.sql` to clean and transform the data.
+    - Then run `sql/02_zepto_analysis_queries.sql` to generate the insights.
 
 ---
